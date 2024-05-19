@@ -3,7 +3,6 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
-import base64
 
 # Set theme
 st.set_page_config(
@@ -29,16 +28,16 @@ st.write(
 
 
 
-# Function to create a downloadable link for a DataFrame
-def download_link(df, filename, text):
-    csv = df.to_csv(index=False)
-    b64 = base64.b64encode(csv.encode()).decode()
-    href = f'<a href="data:file/csv;base64,{b64}" download="{filename}.csv">{text}</a>'
-    return href
+# # Function to create a downloadable link for a DataFrame
+# def download_link(df, filename, text):
+#     csv = df.to_csv(index=False)
+#     b64 = base64.b64encode(csv.encode()).decode()
+#     href = f'<a href="data:file/csv;base64,{b64}" download="{filename}.csv">{text}</a>'
+#     return href
 
-# Set up Font Awesome icons for download and share
-download_icon = '<i class="fas fa-download"></i>'
-share_icon = '<i class="fas fa-share-alt"></i>'
+# # Set up Font Awesome icons for download and share
+# download_icon = '<i class="fas fa-download"></i>'
+# share_icon = '<i class="fas fa-share-alt"></i>'
 
 # Load the dataset
 @st.cache_data
