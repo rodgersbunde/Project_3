@@ -1,5 +1,6 @@
 streamlit
 pandas
 scikit-learn
-sklearn.ensemble
-sklearn.model_selection
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
